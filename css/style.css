@@ -1,0 +1,343 @@
+@font-face {
+  font-family: "brandon_grotesqueblack";
+  src: url("../fonts/brandon-grotesque-black-58a8a3e824392.woff2")
+      format("woff2"),
+    url("brandon-grotesque-black-58a8a3e824392.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf") format("truetype"),
+    url("../fonts/lato-regular-webfont.woff2") format("woff2"),
+    url("../fonts/lato-regular-webfont.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato";
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav.header {
+  margin: 2.5rem;
+  margin-bottom: 3.3rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.container .logo a,
+.container .resume a {
+  color: black;
+  font-size: 1.4rem;
+  padding-right: 20px;
+  transition: 0.5s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  font-family: "brandon_grotesqueblack";
+}
+
+.container .logo a:hover {
+  opacity: 0.7;
+}
+.container .resume a:hover {
+  opacity: 0.7;
+}
+
+.container .content {
+  width: 50%;
+}
+
+.container .content h1 {
+  color: #234ef3;
+  font-size: 2.3rem;
+  font-weight: 600;
+  font-family: "brandon_grotesqueblack";
+}
+.container .content span {
+  color: #234ef3;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.container .content span::after {
+  content: " ";
+  border-bottom: 1px solid #ccc;
+  width: 50px;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.container .content .para {
+  color: black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.container .image img {
+  width: 150px;
+  border-radius: 50%;
+  height: 150px;
+}
+
+.container .hide {
+  display: none;
+}
+
+/* cards */
+
+.cards {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 50px;
+}
+
+.cards hr {
+  margin-bottom: 30px;
+}
+
+.cards .row {
+  margin-bottom: 30px;
+  clear: both !important;
+}
+
+.cards .row img {
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cards .row img:hover {
+  -webkit-transform: scale(1.01);
+  transition: 0.3s all 0s ease;
+}
+
+.card {
+  background: none;
+  border: none;
+}
+.card .label,
+.card .arrow {
+  position: absolute;
+}
+
+.hotel-card .label {
+  padding: 10px 20px;
+  color: white;
+  bottom: 30px !important;
+  left: 20px;
+  font-size: 12px;
+  border-radius: 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: #333333;
+}
+
+.card .arrow {
+  background: url(../img/next.png) center center no-repeat;
+  background-size: 15px;
+  width: 40px;
+  height: 40px;
+  color: white !important;
+  right: 20px;
+  border-radius: 100%;
+  bottom: 31rem;
+  background-color: #ccc;
+}
+
+.card .view-arrow {
+  opacity: 0;
+  text-transform: uppercase;
+  color: white !important;
+  font-size: 10px;
+  letter-spacing: 1px;
+  position: absolute;
+  right: 65px;
+  transition: 0.3s all 0s ease;
+  bottom: 34.5rem;
+}
+
+.hotel-card.card.edge .arrow {
+  bottom: 19rem;
+}
+
+/* footer */
+footer {
+  padding: 50px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+footer .content .name a {
+  color: black;
+  font-size: 1.4rem;
+  transition: 0.5s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+footer .content .name a::after {
+  content: "";
+  border-bottom: 3px solid black;
+  width: 30px;
+  margin: 20px auto;
+  display: block;
+}
+
+footer .content .name a:hover {
+  opacity: 0.7;
+}
+
+footer .content .email {
+  color: black;
+  font-size: 18px;
+}
+
+footer .content .sub {
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+footer .content .social {
+  margin-top: 20px;
+}
+
+footer .content .social img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .container .logo a {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2.5px;
+  }
+
+  .header .container {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .container {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .content {
+    text-align: center;
+    justify-content: center;
+    display: block;
+    width: 100%;
+  }
+
+  .container .image {
+    margin-top: 20px;
+  }
+
+  .container .content .para,
+  .container .content span::after {
+    display: none;
+  }
+
+  .container .hide {
+    display: block;
+  }
+
+  .cards {
+    padding: 0 50px;
+  }
+
+  .cards .row img {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 20px;
+  }
+
+  .hotel-card.card.edge .arrow {
+    bottom: 31rem;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .container .logo a {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2.5px;
+  }
+
+  .header .container {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .container {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .content {
+    text-align: center;
+    justify-content: center;
+    display: block;
+    width: 100%;
+  }
+
+  .container .image {
+    margin-top: 20px;
+  }
+
+  .container .content .para,
+  .container .content span::after {
+    display: none;
+  }
+
+  .container .hide {
+    display: block;
+  }
+
+  .cards {
+    padding: 0 50px;
+  }
+
+  .cards .row img {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 20px;
+  }
+
+  .hotel-card.card.edge .arrow {
+    bottom: 31rem;
+  }
+}
